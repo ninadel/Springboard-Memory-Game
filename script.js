@@ -1,4 +1,4 @@
-// array of available colors for cards
+// array of available colors for creating cards, there will be 2 cards created for each color
 const COLORS = ["red", "blue", "green", "orange", "purple"];
 
 // function for shuffling items in an array
@@ -22,7 +22,7 @@ function shuffle(array) {
   return array;
 }
 
-// function to create card id
+// function to generate card id string
 function getCardIdString(prefix, num) {
   cardId = prefix;
   // check if leading zeros should be added to id
@@ -34,8 +34,8 @@ function getCardIdString(prefix, num) {
   return cardId;
 }
 
-// this function loops over the array of colors
-// it creates a new div and gives it a class with the value of the color
+// this function creates a shuffled list of colors to be assigned to cards
+// it creates a new div for each card
 // it also adds an event listener for a click for each card
 function createCards() {
   // an object to store cards in the game and their individual properties
