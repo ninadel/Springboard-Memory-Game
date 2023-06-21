@@ -1,0 +1,37 @@
+#game {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#actions {
+  margin: 50px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.card {
+  /* border: 1px solid black; */
+  width: 15%;
+  max-width: 200px;
+  height: 200px;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: black;
+  transition: all 100ms;
+}
+
+h1 {
+  text-align: center;
+  font-family: Sans-Serif;
+  font-size: 5rem;
+  display: block;
+}
+
+button {
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+}
