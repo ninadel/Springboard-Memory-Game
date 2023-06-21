@@ -185,17 +185,14 @@ function handleCardClick(event) {
   // ignores click handling when two cards are currently being checked
   if (game["noClicking"]) return;
 
-  // if clicking on a card, continue, otherwise ignore
-  if (event.target.classList.contains("card")) {
-    clickedCardId = event.target.getAttribute("id");
-    clickedCardObject = game["cards"][clickedCardId];
+  clickedCardId = event.target.getAttribute("id");
+  clickedCardObject = game["cards"][clickedCardId];
 
-    // if the player is clicking on an already checked card, ignore
-    if (clickedCardObject["checking"]) return;
+  // if the player is clicking on an already checked card, ignore
+  if (clickedCardObject["checking"]) return;
 
-    // if player is clicking a solved card, ignore
-    if (clickedCardObject["solved"]) return;
-  } else return;
+  // if player is clicking a solved card, ignore
+  if (clickedCardObject["solved"]) return;
 
   // continue game
   continueGame(game);
