@@ -110,6 +110,7 @@ function checkForMatch(game) {
   return cardsToCheck[0][1] === cardsToCheck[1][1];
 }
 
+// function which cycles through all the cards in the game and updates count tallies
 function updateGameState(game) {
   let checkingCount = 0;
   let solvedCount = 0;
@@ -130,7 +131,9 @@ function updateGameState(game) {
   renderCards(game);
 }
 
+// function to initialize memory game
 function startMemoryGame() {
+  // an object to store properties of the new game
   const game = {
     cards: createCards(),
     cardCount: document.querySelectorAll(".card").length,
@@ -142,6 +145,9 @@ function startMemoryGame() {
   return game;
 }
 
+// function that handles game logic
+// it detects whether a pair of cards are available to be evaluated for a match
+// otherwise it updates the properties of the clicked card
 function continueGame(game) {
   // if less than 2 cards are being checked, check clicked card
   if (game["checkingCount"] < 2) {
